@@ -3,29 +3,31 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [tasks, setTasks] = useState(["Take a bath", "Wash Clothes"]);
+  const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
   function AddTask() {
-    setTasks([...tasks, inputValue]);
+    if (inputValue !== "") {
+      setTasks([...tasks, inputValue]);
+      setInputValue("");
+    }
   }
   const deleteTask = (indexToDelete) => {
     const updatedTasks = tasks.filter((_, index) => index !== indexToDelete);
     setTasks(updatedTasks); // Update state with the new array
   };
   return (
-    <div className="flex justify-center items-center w-full">
-      <div className="rounded-md flex flex-col gap-5 w-full">
-        <div className="flex justify-between bg-cyan-300 w-full p-5">
-          <p className="text-xl font-medium text-center w-1/2">TODO</p>
-          <p className="text-xl font-medium text-center w-1/2">Add Tasks</p>
-        </div>
-        <div className="flex justify-between p-5">
-          <div className="flex flex-col gap-2 w-1/2 items-center">
+    <div className="flex justify-center items-center w-full h-screen md:h-auto">
+      <div className="rounded-md flex flex-col md:flex-row w-full h-full">
+        <div className="md:w-1/2 flex flex-col gap-5 items-center h-1/2 md:h-auto">
+          <div className="flex flex-col justify-between bg-cyan-300 p-5 w-full">
+            <p className="text-xl font-medium text-center">TODO</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center justify-center">
             {tasks.map((task, index) => (
-              <div className="flex gap-5 items-center justify-start text-lg">
+              <div className="flex gap-5 items-center justify-center text-lg">
                 <TaskList
                   key={index}
                   task={task}
@@ -39,8 +41,14 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-5 w-1/2 items-center">
-            <div className="flex flex-col gap-2">
+        </div>
+
+        <div className="flex justify-between md:w-1/2 items-center">
+          <div className="flex flex-col gap-5  items-center w-full">
+            <div className="flex flex-col justify-between bg-cyan-300 w-full p-5">
+              <p className="text-xl font-medium text-center">Add Tasks</p>
+            </div>
+            <div className="flex flex-col gap-2 justify-between">
               <p className="text-lg">Enter the task</p>
               <input
                 name="task"
