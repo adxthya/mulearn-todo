@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mulearn-todo/static/css/main.f80c9081.css",
-    "main.js": "/mulearn-todo/static/js/main.1c402ae4.js",
+    "main.css": "/mulearn-todo/static/css/main.8f5f456f.css",
+    "main.js": "/mulearn-todo/static/js/main.2053a417.js",
     "static/js/453.d5a7fe2e.chunk.js": "/mulearn-todo/static/js/453.d5a7fe2e.chunk.js",
     "index.html": "/mulearn-todo/index.html",
-    "main.f80c9081.css.map": "/mulearn-todo/static/css/main.f80c9081.css.map",
-    "main.1c402ae4.js.map": "/mulearn-todo/static/js/main.1c402ae4.js.map",
+    "main.8f5f456f.css.map": "/mulearn-todo/static/css/main.8f5f456f.css.map",
+    "main.2053a417.js.map": "/mulearn-todo/static/js/main.2053a417.js.map",
     "453.d5a7fe2e.chunk.js.map": "/mulearn-todo/static/js/453.d5a7fe2e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f80c9081.css",
-    "static/js/main.1c402ae4.js"
+    "static/css/main.8f5f456f.css",
+    "static/js/main.2053a417.js"
   ]
 }
